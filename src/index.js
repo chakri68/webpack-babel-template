@@ -1,4 +1,4 @@
-import "./styles/main.css";
-import "./styles/sass/app.scss";
+import "./styles/global.css";
+import "./styles/sass/styles.scss";
 
 console.log("index.js connected!");
