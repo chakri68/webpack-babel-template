@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "none",
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   output: {
     path: __dirname + "/dist",
     filename: "bundle.js",
@@ -13,7 +13,7 @@ module.exports = {
     hot: true,
   },
   resolve: {
-    extensions: ["*", ".js"],
+    extensions: ["*", ".ts", ".js"],
   },
   module: {
     rules: [
@@ -26,14 +26,9 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        test: /\.ts$/,
+        exclude: /node_module/,
+        use: "ts-loader",
       },
     ],
   },
