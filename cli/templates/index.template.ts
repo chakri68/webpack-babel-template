@@ -1,1 +1,3 @@
-console.log("Successfully connected");
+import "../styles/index.scss";
+
+console.log("CONNECTED!");

@@ -34,8 +34,8 @@ async function buildConfig() {
         ],
       }),
       new MiniCssExtractPlugin({
-        filename: "style.css",
-        chunkFilename: "[name].css",
+        filename: "[name].css",
+        chunkFilename: "[id].css",
       }),
     ],
     devtool: "eval-source-map",
